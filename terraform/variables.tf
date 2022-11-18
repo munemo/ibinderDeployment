@@ -70,4 +70,3 @@ variable "tenant_id" {
   type    = string
   default = "7bb1a8e5-59ee-489d-86f5-a50210ae3970"
 }
-

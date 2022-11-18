@@ -9,6 +9,7 @@ terraform {
     access_key           = "3yDWziD+t6NP/Yvp4cQuxnOUGUIj95iVWX11CiWDS8qsaMfmUSPg51Z3dpD++CYy39gZIgg3G6/4+AStrp8TEQ=="
   }
 }
+
 provider "azurerm" {
   skip_provider_registration = "true"
   subscription_id            = var.subscription_id
@@ -69,4 +70,6 @@ module "azure_function_app" {
   storage_account_name       = module.azurerm_storage_account.storage_account_name
   storage_account_access_key = module.azurerm_storage_account.storage_account_access_key
   depends_on                 = [module.app_service_plan, module.azurerm_storage_account]
+
+
 }

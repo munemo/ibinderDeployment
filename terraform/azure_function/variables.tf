@@ -23,3 +23,5 @@ variable "app_service_plan_id" {
 variable "storage_account_access_key" {
   type = string
 }
+
+

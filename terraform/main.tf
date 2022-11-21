@@ -1,10 +1,9 @@
 terraform {
   required_providers {
-   
     azuread = {
       source  = "hashicorp/azuread"
       version = "~> 2.15.0"
-    } 
+    }
   }
   backend "azurerm" {
     resource_group_name  = "ibinderrg"

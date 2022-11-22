@@ -14,6 +14,8 @@ terraform {
     tenant_id            = "7bb1a8e5-59ee-489d-86f5-a50210ae3970"
     access_key           = "https://ibinderkeyvaultstore.vault.azure.net/secrets/StorageAccountKey/fb39436bc0ac4e149c693e71fda977bd"
   }
+
+
 }
 
 provider "azurerm" {

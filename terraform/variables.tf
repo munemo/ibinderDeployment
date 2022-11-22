@@ -31,7 +31,7 @@ variable "account_tier" {
 
 variable "app_service_name" {
   type    = string
-  default = "ibinderappserviceplan"
+  default = "ibinder"
 }
 
 variable "application_insights_name" {

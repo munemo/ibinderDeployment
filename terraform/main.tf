@@ -10,12 +10,7 @@ provider "azurerm" {
 
 data "azurerm_client_config" "current" {}
 
-module "app_service_plan" {
-  source              = "./app_service_plan"
-  app_service_name    = var.app_service_name
-  location            = var.location
-  resource_group_name = var.resource_group_name
-}
+
 
 module "azure_function_app" {
   source                     = "./azure_function"
@@ -25,5 +20,5 @@ module "azure_function_app" {
   app_service_plan_id        = module.app_service_plan.azurerm_service_plan
   storage_account_name       = var.storage_account_name
   storage_account_access_key = "https://ibinderkeyvaultstore.vault.azure.net/secrets/StorageAccountKey/fb39436bc0ac4e149c693e71fda977bd"
-  depends_on                 = [module.app_service_plan]
+
 }

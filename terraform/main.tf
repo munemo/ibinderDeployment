@@ -22,7 +22,7 @@ module "azure_function_app" {
   function_app_name          = var.function_app_name
   location                   = var.location
   resource_group_name        = var.resource_group_name
-  app_service_plan_id        = "/subscriptions/ee6e8a42-2a70-406d-a749-18c554337870/resourcegroups/ibinderresourcegroup/providers/Microsoft.Web/ServerFarms/ibinder"
+  app_service_plan_id        = "/subscriptions/ee6e8a42-2a70-406d-a749-18c554337870/resourcegroups/ibinderresourcegroup/providers/Microsoft.Web/serverfarms/ibinder"
   storage_account_name       = var.storage_account_name
   storage_account_access_key = "https://ibinderkeyvaultstore.vault.azure.net/secrets/StorageAccountKey/fb39436bc0ac4e149c693e71fda977bd"
 

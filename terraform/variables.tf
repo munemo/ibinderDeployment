@@ -5,7 +5,7 @@ variable "location" {
 
 variable "resource_group_name" {
   type    = string
-  default = "ibinderrg"
+  default = "ibinderresourcegroup"
 }
 
 variable "storage_account_name" {

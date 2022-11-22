@@ -25,12 +25,6 @@ provider "azurerm" {
 }
 data "azurerm_client_config" "current" {}
 
-module "resource_group" {
-  source              = "./resource_group"
-  location            = var.location
-  resource_group_name = var.resource_group_name
-}
-
 module "azurerm_storage_account" {
   source                   = "./storage_account"
   storage_account_name     = var.storage_account_name

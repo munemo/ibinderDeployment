@@ -1,6 +1,4 @@
 terraform {
-
-
 }
 
 provider "azurerm" {
@@ -19,15 +17,6 @@ module "app_service_plan" {
   resource_group_name = var.resource_group_name
 }
 
-module "application_insights" {
-  source                    = "./application_insights"
-  application_insights_name = var.application_insights_name
-  application_type          = var.application_type
-  location                  = var.location
-  resource_group_name       = var.resource_group_name
-
-}
-
 module "azure_function_app" {
   source                     = "./azure_function"
   function_app_name          = var.function_app_name
@@ -37,6 +26,4 @@ module "azure_function_app" {
   storage_account_name       = var.storage_account_name
   storage_account_access_key = "https://ibinderkeyvaultstore.vault.azure.net/secrets/StorageAccountKey/fb39436bc0ac4e149c693e71fda977bd"
   depends_on                 = [module.app_service_plan]
-
-
 }

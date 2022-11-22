@@ -12,7 +12,7 @@ terraform {
     key                  = "ibinder.tfstate"
     subscription_id      = "ae6cbacb-2eac-42cc-978e-516b8ef7628d"
     tenant_id            = "7bb1a8e5-59ee-489d-86f5-a50210ae3970"
-    access_key           = "3yDWziD+t6NP/Yvp4cQuxnOUGUIj95iVWX11CiWDS8qsaMfmUSPg51Z3dpD++CYy39gZIgg3G6/4+AStrp8TEQ=="
+    access_key           = "fHFaFigXVWYb9gf6DHOeA/0Z+B5/AJrzSKT0vevEz4/nuD/mY2ImIK3/kKVo90II8eA08PbOtJub+AStJxU01Q"
   }
 }
 

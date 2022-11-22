@@ -10,7 +10,7 @@ provider "azurerm" {
 
 data "azurerm_client_config" "current" {}
 
-module "app_service_plan" {
+module "azurerm_app_service_plan" {
   source              = "./app_service_plan"
   app_service_name    = var.app_service_name
   location            = var.location

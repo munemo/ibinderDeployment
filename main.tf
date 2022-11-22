@@ -3,6 +3,7 @@ resource "azurerm_resource_group" "example" {
   location = var.location
 }
 
+
 resource "random_string" "random" {
   length           = 6
   special          = false

@@ -1,30 +1,15 @@
 terraform {
-  required_providers {
-    azuread = {
-      source  = "hashicorp/azuread"
-      version = "~> 2.15.0"
-    }
-  }
-  backend "azurerm" {
-    resource_group_name  = "ibinderresourcegroup"
-    storage_account_name = "ibinderstorage"
-    container_name       = "ibinderstoragecontainer"
-    key                  = "ibinder.tfstate"
-    subscription_id      = "ae6cbacb-2eac-42cc-978e-516b8ef7628d"
-    tenant_id            = "7bb1a8e5-59ee-489d-86f5-a50210ae3970"
-    access_key           = "fHFaFigXVWYb9gf6DHOeA/0Z+B5/AJrzSKT0vevEz4/nuD/mY2ImIK3/kKVo90II8eA08PbOtJub+AStJxU01Q"
-  }
 
 
 }
 
 provider "azurerm" {
   skip_provider_registration = "true"
-  subscription_id            = "ae6cbacb-2eac-42cc-978e-516b8ef7628d"
-  tenant_id                  = "7bb1a8e5-59ee-489d-86f5-a50210ae3970"
   features {}
   use_msi = true
 }
+
+
 data "azurerm_client_config" "current" {}
 
 module "app_service_plan" {
@@ -49,8 +34,8 @@ module "azure_function_app" {
   location                   = var.location
   resource_group_name        = var.resource_group_name
   app_service_plan_id        = module.app_service_plan.azurerm_service_plan
-  storage_account_name       = module.azurerm_storage_account.storage_account_name
-  storage_account_access_key = module.azurerm_storage_account.storage_account_access_key
+  storage_account_name       = var.storage_account_name
+  storage_account_access_key = "https://ibinderkeyvaultstore.vault.azure.net/secrets/StorageAccountKey/fb39436bc0ac4e149c693e71fda977bd"
   depends_on                 = [module.app_service_plan]
 
 

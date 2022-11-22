@@ -6,7 +6,7 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name  = "ibinderrg"
+    resource_group_name  = "ibinderresourcegroup"
     storage_account_name = "ibinderstorageaccount"
     container_name       = "ibinderstoragecontainer"
     key                  = "ibinder.tfstate"
@@ -32,7 +32,6 @@ module "azurerm_storage_account" {
   resource_group_name      = var.resource_group_name
   account_tier             = var.account_tier
   account_replication_type = var.account_replication_type
-  depends_on               = [module.resource_group]
 }
 
 module "storage_container" {
@@ -48,7 +47,6 @@ module "app_service_plan" {
   app_service_name    = var.app_service_name
   location            = var.location
   resource_group_name = var.resource_group_name
-  depends_on          = [module.resource_group]
 }
 
 module "application_insights" {
@@ -57,10 +55,8 @@ module "application_insights" {
   application_type          = var.application_type
   location                  = var.location
   resource_group_name       = var.resource_group_name
-  depends_on                = [module.resource_group]
 
 }
-
 
 module "azure_function_app" {
   source                     = "./azure_function"

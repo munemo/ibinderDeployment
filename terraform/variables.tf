@@ -10,7 +10,7 @@ variable "resource_group_name" {
 
 variable "storage_account_name" {
   type    = string
-  default = "ibinderstorageaccount"
+  default = "ibinderstorage"
 }
 
 variable "storage_container_name" {
@@ -47,7 +47,7 @@ variable "application_type" {
 
 variable "storage_account_access_key" {
   type    = string
-  default = "https://ibinderKeys.vault.azure.net/secrets/StorageContainerAccessKey"
+  default = "fHFaFigXVWYb9gf6DHOeA/0Z+B5/AJrzSKT0vevEz4/nuD/mY2ImIK3/kKVo90II8eA08PbOtJub+AStJxU01Q"
 }
 
 variable "app_service_plan_id" {

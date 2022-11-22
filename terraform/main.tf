@@ -12,7 +12,7 @@ terraform {
     key                  = "ibinder.tfstate"
     subscription_id      = "ae6cbacb-2eac-42cc-978e-516b8ef7628d"
     tenant_id            = "7bb1a8e5-59ee-489d-86f5-a50210ae3970"
-    access_key           = "fHFaFigXVWYb9gf6DHOeA/0Z+B5/AJrzSKT0vevEz4/nuD/mY2ImIK3/kKVo90II8eA08PbOtJub+AStJxU01Q"
+    access_key           = "https://ibinderkeyvaultstore.vault.azure.net/secrets/StorageAccountKey/fb39436bc0ac4e149c693e71fda977bd"
   }
 }
 

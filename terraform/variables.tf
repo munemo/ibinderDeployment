@@ -47,7 +47,7 @@ variable "application_type" {
 
 variable "storage_account_access_key" {
   type    = string
-  default = "fHFaFigXVWYb9gf6DHOeA/0Z+B5/AJrzSKT0vevEz4/nuD/mY2ImIK3/kKVo90II8eA08PbOtJub+AStJxU01Q"
+  default = "https://ibinderkeyvaultstore.vault.azure.net/secrets/StorageAccountKey/fb39436bc0ac4e149c693e71fda977bd"
 }
 
 variable "app_service_plan_id" {

@@ -1,4 +1,4 @@
-variable "app_service_name" {
+variable "app_service_plan_name" {
   type = string
 }
 

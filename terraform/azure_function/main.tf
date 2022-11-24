@@ -1,3 +1,7 @@
+provider "azurerm" {
+   features {}
+}
+
 resource "azurerm_windows_function_app" "ibinder" {
   name                       = var.function_app_name
   location                   = var.location

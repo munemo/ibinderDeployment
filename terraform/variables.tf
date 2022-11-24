@@ -2,26 +2,38 @@
 variable "location" {
   description = "The Azure Region in which all resources groups should be created."
   type        = string
-  default = "eastus"
+  default     = "northeurope"
 }
 variable "resource_group_name" {
   description = "The name of the resource group"
   type        = string
-  default = "rgdev"
+  default     = "ibindergroup"
 }
 variable "storage_account_name" {
   description = "The name of the storage account"
   type        = string
-  default = "abcde"
+  default     = "ibinderstorageaccount"
 }
 variable "storage_account_tier" {
   description = "Storage Account Tier"
   type        = string
-  default = "Standard"
+  default     = "Standard"
 }
 
-variable "virtual_network_name" {
-  description = "Virtual Network Name"
+variable "app_service_plan_name" {
+  description = "App service plan name"
   type        = string
-  default = "vnet"
+  default     = "ibinderappservice"
+}
+
+
+variable "application_insights_name" {
+  description = "Application insights name"
+  type        = string
+  default     = "ibinderapplicationinsights"
+}
+
+variable "application_type" {
+  type    = string
+  default = "web"
 }

@@ -1,4 +1,4 @@
 output "azurerm_resource_group_name" {
-  value       = azurerm_resource_group.rg.name
+  value       = azurerm_resource_group.resource_group.name
   description = "The resource group name"
 }

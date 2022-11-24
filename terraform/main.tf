@@ -12,7 +12,8 @@ module "azurerm_resource_group" {
 }
 
 module "azurerm_service_plan" {
-  source   = "./app_service_plan"
-  name     = var.app_service_plan_name
-  location = var.location
+  source                = "./app_service_plan"
+  resource_group_name   = var.resource_group_name
+  app_service_plan_name = var.app_service_plan_name
+  location              = var.location
 }
